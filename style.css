@@ -8,3 +8,39 @@
     margin-top:2rem;
     margin-bottom:2rem;
 }
+
+.article-sub-title{
+    color:  rgb(74,153,211);
+    font-size: 2rem;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.abouts{
+    margin-left: 3rem;
+}
+
+.span-bold{
+    font-weight: bold;
+    color: #66bc46;
+}
+p{
+    text-align: justify;
+    text-justify: inter-word;
+  }
+#home-article {
+    position: relative;
+}
+#cover-image{
+    width:100%;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20px; /* Adjust this value to position the overlay from the top */
+    left: 20px; /* Adjust this value to position the overlay from the left */
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white; /* Set text color to make it visible against the background */
+}

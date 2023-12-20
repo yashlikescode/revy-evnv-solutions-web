@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
@@ -35,7 +36,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about-article">About</a>
               </li>
 
               <li class="nav-item">
@@ -47,7 +48,7 @@
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#contact-title">Contact Us</a>
               </li>
 
             </ul>
@@ -58,9 +59,18 @@
     <hr style="color: #66bc46;">
   </header>
     
-  <main style="padding-top: 10%;">
-    <div class="recycle-reuse row justify-content-center">
+  <main>
 
+    <article id="home-article">
+      <img id="cover-image" src="./assets/new-banner.jpg" alt="Cover Image">
+      <div class="text-overlay col-4" style="margin-top:10%;padding:3%; border-radius:30px; background-color: rgba(0, 0, 0, 0.3);">
+          <p>"No one person has to do it all, but if each one of us follows our heart and our own inclinations, we will find the small things that we can do to create a sustainable future and a healthy environment"</p>
+          <h5>- John Denver</h5>
+      </div>
+  </article>
+  
+
+    <div class="recycle-reuse row justify-content-center">
         <div class="card col-lg-2 col-sm-5" style="margin:1cm;width:13rem;height:24rem;
         display: flex;align-items: center;justify-content: center;">
             <img style="height:10rem" src="./assets/reduce.png" class="card-img-top" alt="...">
@@ -98,9 +108,39 @@
         </div>
 
     </div>
+    <span id="about-here"></span>
+    <article id="about-article" style="margin-left: 7vw;margin-right: 7vw;">
+      <div class="article-title">About</div>
+      <div class="abouts">
+      <h2 class="article-sub-title">Company</h2> 
+      <p>REVY Environmental Solutions has answers to all that take place in every step of the waste management and has proven competency in transforming waste into re-usable resources. Waste treatment and bio-methane production through Anaerobic Digestion (AD) process is our core area of expertise. We do provide Bio-cultures to enhance aeration unit of ETPs for Industrial Waste containing High Phenol and High TDS. Treatability Studies on waste water from Dairy, Vegetable market waste, Kitchen waste, also on most complex Paper mills, Pharmaceutical, Fertilizer, Dye and Dye Intermediates, Distilleries and Petrochemicals industries adopting pre-treatment, advanced anaerobic treatment, aerobic and tertiary treatment methods.
+
+      </p>
+      
+      <h2 class="article-sub-title">Management Team</h2>
+      <p>
+        <span class="span-bold">Dr. Vanita Prasad</span>  is an Environmental Biotechnologist with more than 15 yrs. of experience in related field. Having graduated in Science from University of Delhi, she completed her Master's and Ph.D. in Biotechnology under Department of Biotechnology and Central Scientific Industrial Research, Govt. of India fellowships. Dr. Prasad has a long association with the industry as Consultant Scientist while heading R&D functions of various waste management companies. She hold patents for specific innovation in the field of Waste management and Renewable energy. 
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/M2NucENGbMY?si=F8yqhBCI0c9SwhXS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <br><br><br>
+      <p>
+        <span class="span-bold">Mr. Rajneesh Prasad</span> is a Business Management post graduate from Murdoch University, Australia with over 20 years of corporate experience at various positions in MNCs like Miles, Bayer and Siemens. His core expertise is in Strategic planning, Project management, Marketing, Techno -Commercial Negotiation, Legal and regulatory clearances. 
+      </p>
+
+      <p>
+        <span class="span-bold">Mr. Bhavik Kathrani</span> is an Accounting graduate with a rich  experience in Finance, Accounting, Taxation and Audits and support project accounting, procurement, Liaoning with banks & statutory bodies and manages the business administration part.
+      </p>
+      
+      <p>
+        To implement our solutions, we work with various industry partners who have proven track record in the field of waste management. We leverage individual strength of our associates to provide optimal, Cost-effective and sustainable solution to our clients. We do have cross industry collaborations to augment the extended needs of our customer from time to time. 
+      </p>
+      </div>
+    </article>
+
 
   <article id="contact-us-article" style="margin-left: 7vw;margin-right: 7vw;">
-    <div class="article-title">Contact Us</div>
+    <div id="contact-title" class="article-title">Contact Us</div>
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d548.7505255643268!2d73.15913869776224!3d22.295453854126936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc61fee9b3ee3%3A0xdea7f0739748bb00!2sSiddharth%20Upscale!5e0!3m2!1sen!2sin!4v1703070106862!5m2!1sen!2sin" width="500rem" height="400rem" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -161,6 +201,7 @@
   <div style="text-align: center;">Copyright © REVY Environmental Solutions Pvt. Ltd. CINU74999GJ2017PTC098509. All rights reserved.</div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 
   </body>
