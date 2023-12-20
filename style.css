@@ -8,9 +8,11 @@
     margin-top:2rem;
     margin-bottom:2rem;
 }
-
+h3{
+    color: #4a99d3;
+}
 .article-sub-title{
-    color:  rgb(74,153,211);
+    color:  #4a99d3;
     font-size: 2rem;
     margin-top:2rem;
     margin-bottom:2rem;
@@ -24,9 +26,8 @@
     font-weight: bold;
     color: #66bc46;
 }
-p{
-    text-align: justify;
-    text-justify: inter-word;
+.p-reduce{
+    text-align: center;
   }
 #home-article {
     position: relative;
@@ -44,3 +45,4 @@ p{
     background-color: rgba(0, 0, 0, 0.3);
     color: white; /* Set text color to make it visible against the background */
 }
+
