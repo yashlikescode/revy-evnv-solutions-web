@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .input-container {
+  --c-text: rgb(50, 50, 80);
+  --c-bg: rgb(252, 252, 252);
+  --c-outline: rgb(55, 45 , 190);
+  display: grid;
+  gap: 1ch;
+  position: relative;
+  max-width: 190px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.input-field {
+  padding: 0.5em 0.75em;
+  border-radius: 0.2em;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+  width: 100%;
+}
+
+.input-field:not(:placeholder-shown) + .input-label {
+  transform: translateY(-220%);
+  opacity: 1;
+}
+
+
+
+.input-field:is(:disabled, :read-only) {
+  --c-border: rgb(150, 150, 150);
+  --c-text: rgb(170, 170, 170);
+}
+
+.input-field:is(:focus, :focus-visible) {
+  outline: 2px solid var(--c-outline);
+  outline-offset: 2px;
+}
+
+.input-label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+tr{
+    width:100%;
+}
+body{
+    display:grid;
+    place-items: center;
+}
+button {
+ appearance: button;
+ background-color: #1899D6;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ box-sizing: border-box;
+ color: #FFFFFF;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 15px;
+ font-weight: 700;
+ letter-spacing: .8px;
+ line-height: 20px;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 13px 19px;
+ text-align: center;
+ text-transform: uppercase;
+ touch-action: manipulation;
+ transform: translateZ(0) translateX(50%);
+ transition: filter .2s;
+ user-select: none;
+ -webkit-user-select: none;
+ vertical-align: middle;
+ white-space: nowrap;
+}
+
+button:after {
+ background-clip: padding-box;
+ background-color: #1CB0F6;
+ border: solid transparent;
+ border-radius: 16px;
+ border-width: 0 0 4px;
+ bottom: -4px;
+ content: "";
+ left: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ z-index: -1;
+}
+
+button:main, button:focus {
+ user-select: auto;
+}
+
+button:hover:not(:disabled) {
+ filter: brightness(1.1);
+}
+
+button:disabled {
+ cursor: auto;
+}
+
+button:active:after {
+ border-width: 0 0 0px;
+}
+
+button:active {
+ padding-bottom: 10px;
+}
+
+.cform{
+    border:solid 1px grey;
+    padding:0.5cm 1.5cm 0.5cm 0.5cm;
+    border-radius:0.5cm
+}
+
+        </style>
+    </head>
+<body id="bod">
+    <div class="cform" id="cform">
+    <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeP3pLQyB_hhYj8e61GyqttDt_t9ObCVD8uf08wszW2fdbjGw/formResponse">
+        <div id="hvemsg" style="color: rgb(0, 123, 191);width:109%;
+        text-align: center;"><b>Have a Message?</b></div>
+        <table>
+            <tr>
+                <td>
+                    <label class="input-label" for="entry.37702995">Name:</label>
+                </td>
+                <td>
+                    <p class="input-container">
+                        <input type="text" name="entry.37702995" id="text1" 
+                        class="input-field" autocomplete="name">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="input-label" for="entry.923396397">
+                        Email: <span style="color: red;font-size:small;">*</span></label>
+                </td>
+                <td>
+                    <p class="input-container">
+                        <input type="text" name="entry.923396397" id="text2" 
+                        class="input-field" autocomplete="email" required>
+                     
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="input-label" for="entry.1133344304">Subject:</label>
+                </td>
+                <td>
+                    <p class="input-container">
+                        <input type="text" name="entry.1133344304" id="text3" 
+                        class="input-field" autocomplete="subject">
+                
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="input-label" for="entry.988302134">
+                        Message: <span style="color: red;font-size:small;">*</span></label>
+                </td>
+                <td>
+                    <p class="input-container">
+                        <textarea style="resize: vertical;" type="text" placeholder="How can I help you?" 
+                        name="entry.988302134" id="text4" class="input-field" 
+                        autocomplete="message" required></textarea>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button type="submit" id="send" style="justify-self: center;" onclick="check()">Send Message</button>
+    </form>
+    </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the form and its elements
+  const form = document.getElementById("cform");
+  const emailInput = document.getElementById("text2");
+  const messageInput = document.getElementById("text4");
+  const submitButton = document.getElementById("send");
+  const formheading = document.getElementById("hvemsg")
+
+  // Add event listeners to the email and message inputs
+  emailInput.addEventListener("input", validateForm);
+  messageInput.addEventListener("input", validateForm);
+
+  // Function to check the form validity and enable/disable the submit button
+  function validateForm() {
+    if (emailInput.validity.valid && messageInput.validity.valid) {
+      submitButton.style.display = 'block';
+      formheading.style.display = 'none';
+    } else {
+      submitButton.style.display = 'none';
+      formheading.style.display = 'block';
+    }
+  }
+
+  // Initial validation check
+  validateForm();
+});
+     
+    </script>
+</body>
+</html>
