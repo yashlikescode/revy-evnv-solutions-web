@@ -1,4 +1,14 @@
+function scrollToElement(elementId) {
+  var targetElement = document.getElementById(elementId);
 
+  if (targetElement) {
+    var offsetTop = targetElement.offsetTop -100;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  }
+}
 
   // Get a reference to the iframe
   var iframe = document.getElementById('contform');
