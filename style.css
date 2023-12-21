@@ -11,6 +11,14 @@ a:hover {
     color: #66bc46;
 }
 
+.redcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 0px 0px #4a99d3;
+}
+.redcard {
+  border-radius: 0.4cm;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
 .article-title{
     color: #66bc46;
     font-size: 3rem;
