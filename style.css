@@ -259,8 +259,104 @@ h3{
   box-shadow: 0px 0px 0px 0px #a29bfe;
 }
 
+.linbutton {
+  display: flex;
+  background-color: #0A66C2;
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px 5px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: .3s ease;
+}
+
+.linbutton svg {
+  height: 30px;
+}
+
+.linbutton:hover {
+  box-shadow: none;
+}
+
+.team{
+  border: solid 1px #4a99d3;
+  padding:0.5cm;
+  margin:0.5cm 0 0.5cm 0;
+  border-radius: 0.5cm;
+}
+
   
-  
+/* this card is inspired form this - https://georgefrancis.dev/ */
+
+.testcard {
+  --border-radius: 0.75rem;
+  --primary-color:#4a99d3;
+  --secondary-color:#66bc46;
+  width: 210px;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+  margin:1rem;
+}
+
+.testcard > * + * {
+  margin-top: 1.1em;
+}
+
+.testcard .testcard__content {
+  color: black;
+  font-size: 0.86rem;
+}
+
+.testcard .testcard__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+
+.testcard .testcard__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testcard svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.testcard:hover .testcard__title {
+  color: var(--secondary-color);
+}
+
+.testcard:hover .testcard__arrow {
+  background:#66bc46;
+}
+
+.testcard:hover .testcard__arrow svg {
+  transform: translateX(3px);
+}  
   
   
   

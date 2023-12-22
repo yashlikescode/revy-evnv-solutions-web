@@ -61,3 +61,33 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
+function vanitalinkedin() {
+  var linkToOpen = 'https://www.linkedin.com/in/vanita-prasad-92310551/';
+  window.open(linkToOpen, '_blank');
+}
+function rajneeshlinkedin() {
+  var linkToOpen = 'https://www.linkedin.com/in/rajneesh-prasad-29419312/';
+  window.open(linkToOpen, '_blank');
+}
+function bhaviklinkedin() {
+  var linkToOpen = 'https://www.linkedin.com/in/bhavikkumar-kathrani-11255013b/';
+  window.open(linkToOpen, '_blank');
+}
+
+function xeon() {
+  var linkToOpen = './assets/testimonials/4.png';
+  window.open(linkToOpen, '_blank');
+}
+function stagot() {
+  var linkToOpen = './assets/testimonials/3.png';
+  window.open(linkToOpen, '_blank');
+}
+function transpeck() {
+  var linkToOpen = './assets/testimonials/1.png';
+  window.open(linkToOpen, '_blank');
+}
+function pepsico() {
+  var linkToOpen = './assets/testimonials/2.jpg';
+  window.open(linkToOpen, '_blank');
+}
