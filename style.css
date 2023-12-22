@@ -1,9 +1,25 @@
+.nav-link:hover{
+  color:#66bc46;
+}
+
 .labdiv>img{
-  border:1px solid #66bc46;
+  border:1px solid #4a99d3;
   border-radius: 0.25cm;
   margin:0.5cm;
   width: 15vw;
 }
+.labdiv {
+  transition: transform .5s;
+}
+.labdiv:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+}
+.labdiv>img:hover{
+  border:1px solid #66bc46;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -183,13 +199,32 @@ h3{
     opacity: 1;
     transition: opacity 0.5s ease;
   }
+
+
+  .prodclass >.card{
+    transition: transform .5s;
+  }
+  .prodclass >.card:hover {
+    -ms-transform: scale(0.95); /* IE 9 */
+    -webkit-transform: scale(0.95); /* Safari 3-8 */
+    transform: scale(0.95); 
+  }
   
-  
-  
-  
-  
-  
- 
+ .prodclass>.card:hover{
+  border: 1px #66bc46 solid;
+ }
+.carousel-control-next{
+transform:translateX(-0.2cm);
+}
+.carousel-control-prev{
+  transform:translateX(-0.4cm);
+}
+.carousel-control-next:hover{
+background-color: #66bc46;
+}
+.carousel-control-prev:hover{
+  background-color: #66bc46;
+}
 .icon-bar {
   position: fixed;
   top: 50%;
@@ -250,7 +285,6 @@ h3{
   color: white;
   cursor: pointer;
   border:none;
-  
   padding: 10px 20px;
   margin:0.5cm;
   font-size: 0.5cm;
@@ -258,6 +292,11 @@ h3{
   border-radius: 0.2cm;
   transition: all ease 0.1s;
   box-shadow: 0px 5px 0px 0px #9ae67e;
+}
+#myBtn:hover{
+  background-color: #9ae67e;
+  box-shadow: 0px 5px 0px 0px #4a99d3;
+  color:#4a99d3;
 }
 
 #myBtn:active {
@@ -289,7 +328,7 @@ h3{
 }
 
 .linbutton:hover {
-  box-shadow: none;
+  box-shadow: 0 4px 6px 5px #65bc469a, 0 2px 4px -1px #65bc469a;
 }
 
 .team{
