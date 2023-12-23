@@ -91,3 +91,85 @@ function pepsico() {
   var linkToOpen = './assets/testimonials/2.jpg';
   window.open(linkToOpen, '_blank');
 }
+
+function addPaddingForMobile() {
+  var targetElement = document.getElementById('revynav');
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (screenWidth < 600) {
+    // Add padding for smartphones
+    targetElement.style.paddingTop = '2%';
+  } else {
+    // Reset padding for larger screens
+    targetElement.style.paddingTop = '1%';
+  }
+}
+
+// Initial call to set padding on page load
+addPaddingForMobile();
+
+// Listen for window resize events to update padding dynamically
+window.addEventListener('resize', addPaddingForMobile);
+
+
+window.addEventListener('scroll', function() {
+  var textElement6 = document.querySelector('#home-article');
+  var rect6 = textElement6.getBoundingClientRect();
+  var navInd6 = document.getElementById("nav-home");
+  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
+    navInd6.style.color = "#66bc46";
+    navInd6.style.textDecoration = "underline";
+  } else {
+    navInd6.style.color = "black";
+    navInd6.style.textDecoration = "none";
+
+  }
+});
+window.addEventListener('scroll', function() {
+  var textElement6 = document.querySelector('#about-article');
+  var rect6 = textElement6.getBoundingClientRect();
+  var navInd6 = document.getElementById("nav-about");
+  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
+    navInd6.style.color = "#66bc46";
+    navInd6.style.textDecoration = "underline";
+  } else {
+    navInd6.style.color = "black";
+    navInd6.style.textDecoration = "none";
+  }
+});
+window.addEventListener('scroll', function() {
+  var textElement6 = document.querySelector('#service-article');
+  var rect6 = textElement6.getBoundingClientRect();
+  var navInd6 = document.getElementById("nav-services");
+  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
+    navInd6.style.color = "#66bc46";
+    navInd6.style.textDecoration = "underline";
+  } else {
+    navInd6.style.color = "black";
+    navInd6.style.textDecoration = "none";
+  }
+});
+window.addEventListener('scroll', function() {
+  var textElement6 = document.querySelector('#gallery-article');
+  var rect6 = textElement6.getBoundingClientRect();
+  var navInd6 = document.getElementById("nav-gallery");
+  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
+    navInd6.style.color = "#66bc46";
+    navInd6.style.textDecoration = "underline";
+  } else {
+    navInd6.style.color = "black";
+    navInd6.style.textDecoration = "none";
+  }
+});
+window.addEventListener('scroll', function() {
+  var textElement6 = document.querySelector('#contact-us-article');
+  var rect6 = textElement6.getBoundingClientRect();
+  var navInd6 = document.getElementById("nav-contactus");
+  if (rect6.top <= window.innerHeight) {
+    navInd6.style.color = "#66bc46";
+    navInd6.style.textDecoration = "underline";
+  } else {
+    navInd6.style.color = "black";
+    navInd6.style.textDecoration = "none";
+  }
+});

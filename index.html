@@ -28,7 +28,7 @@
   <a href="#"><button id="myBtn" title="Go to top">Top</button></a>
     <!-- Example Code -->
     <header>
-    <nav id="revynav" style="border-bottom:1px solid #66bc46;position:fixed; padding:2% 5% 0% 5%" class="navbar navbar-expand-lg bg-white fixed-top">
+    <nav id="revynav" style="border-bottom:1px solid #66bc46;position:fixed; padding:1% 5% 0% 5%" class="navbar navbar-expand-lg bg-white fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand navv" href="#">
           <img class="logo-company" style="width: 50vw;padding: 1rem 0 1rem 0;" src="./assets/revy-full-logo.png">
@@ -45,23 +45,23 @@
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" id="nav-home" aria-current="page" href="#">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" onclick="scrollToElement('about-article')">About</a>
+                <a class="nav-link" id="nav-about" onclick="scrollToElement('about-article')">About</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" onclick="scrollToElement('service-title')">Services</a>
+                <a class="nav-link" id="nav-services" onclick="scrollToElement('service-title')">Services</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link"  onclick="scrollToElement('gallery-title')">Gallery</a>
+                <a class="nav-link" id="nav-gallery"  onclick="scrollToElement('gallery-title')">Gallery</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" onclick="scrollToElement('contact-title')">Contact Us</a>
+                <a class="nav-link" id="nav-contactus" onclick="scrollToElement('contact-title')">Contact Us</a>
               </li>
 
             </ul>
@@ -76,7 +76,7 @@
 
     <article id="home-article" style="text-align: center;">
       <img id="landinggif" style="margin-top:1cm; border-radius: 0.25cm;" src="./assets/landing.gif">
-  </article>
+  
   
 
     <div class="recycle-reuse row justify-content-center">
@@ -115,9 +115,9 @@
                 <p class="card-text p-reduce">Recovery includes any process that converts waste material into energy which may contain a higher energy value. </p>
             </div>
         </div>
-
     </div>
-    <span id="about-here"></span>
+  </article>
+
     <article id="about-article" style="margin-left: 3vw;margin-right: 3vw;">
       <div class="article-title">About</div>
       <div class="abouts">
@@ -164,14 +164,15 @@
         To implement our solutions, we work with various industry partners who have proven track record in the field of waste management. We leverage individual strength of our associates to provide optimal, Cost-effective and sustainable solution to our clients. We do have cross industry collaborations to augment the extended needs of our customer from time to time. 
       </p>
       </div>
+      <br><br>
     </article>
-<br><br>
-  <div id="service-title" style="margin-left: 3vw;margin-right: 3vw;" class="article-title">Services</div>
-    <article id="service-article" style="margin-left: 6vw;margin-right: 3vw;text-align: center;">
-      <h3>
+
+    <article id="service-article" style="margin-left: 3vw;margin-right: 3vw;">
+        <div id="service-title" style="margin-right: 3vw;" class="article-title">Services</div>
+      <h3 style="margin-left: 3vw;">
         Our Solutions
       </h3>
-      <ul class="ul-serv">
+      <ul class="ul-serv" style="margin-left: 3vw;">
         <li class="li-serve">Rapid onsite analysis</li>
         <li class="li-serve">ETP / STP commissioning</li>
         <li class="li-serve">Start-up and shock load restart</li>
@@ -181,10 +182,10 @@
         <li class="li-serve">Optimizing microbial fermentation process for BOD reduction</li>
         <li class="li-serve">Optimize biogas outputs using monitoring and process control</li>
       </ul>
-      <h3>
+      <h3 style="margin-left: 3vw;">
         Our Specialties
       </h3>
-      <ul class="ul-serv">
+      <ul class="ul-serv" style="margin-left: 3vw;">
         <li class="li-serve">Effluent Treatment</li>
         <li class="li-serve">Waste Water Treatment</li>
         <li class="li-serve">Waste and water Audit</li>
@@ -194,10 +195,10 @@
         <li class="li-serve">Final effluent disposal, consents and compliance</li>        
       </ul>
 
-      <h3>
+      <h3 style="margin-left: 3vw;">
         Our services includes consulting on:
       </h3>
-      <ul class="ul-serv">
+      <ul class="ul-serv" style="margin-left: 3vw;">
         <li class="li-serve">Scoping and Feasibility of Waste Management</li>
         <li class="li-serve">Advice on scale & technology selection / Treatment ways</li>
         <li class="li-serve">Effluent Stream / Feedstock selection for Anaerobic Digestion</li>      
@@ -210,8 +211,8 @@
 
       <br>
       
-      <h3>Our Products</h3>
-      <div style="margin-left:0.5cm;">
+      <h3 style="margin-left: 3vw;">Our Products</h3>
+      <div  style="margin-left: 3vw;">
         <div class="row container-fluid prodclass">
         <div class="card" style="width: 18rem; margin:2rem;">
           <img src="./assets/products/REVYAEB.jpg" class="card-img-top" alt="...">
@@ -272,8 +273,8 @@
       </div>
       </div>
 
-      <div class="testimonials row">
-      <h3>Testimonials</h3>
+      <div class="testimonials row" style="margin-left: 3vw;">
+      <h3 style="margin-left: 3vw;">Testimonials</h3>
       <div class="testcard col-5" onclick="transpeck()">
         <h3 class="testcard__title">Transpek-Silox (UASB)
         </h3>
