@@ -200,9 +200,14 @@ document.addEventListener("DOMContentLoaded", function() {
   emailInput.addEventListener("input", validateForm);
   messageInput.addEventListener("input", validateForm);
 
+  function hasAtAndDot(str) {
+  var pattern = /^[^@]+@[^.]+\..+$/;
+  return pattern.test(str);
+}
   // Function to check the form validity and enable/disable the submit button
   function validateForm() {
-    if (emailInput.validity.valid && messageInput.validity.valid) {
+    var ema = document.getElementById("text2").value;
+    if (emailInput.validity.valid && messageInput.validity.valid && hasAtAndDot(ema)) {
       submitButton.style.display = 'block';
       formheading.style.display = 'none';
     } else {
