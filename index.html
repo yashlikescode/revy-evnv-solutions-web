@@ -31,7 +31,7 @@
     <nav id="revynav" style="border-bottom:1px solid #66bc46;position:fixed; padding:1% 5% 0% 5%" class="navbar navbar-expand-lg bg-white fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand navv" href="#">
-          <img class="logo-company" style="width: 50vw;padding: 1rem 0 1rem 0;" src="./assets/revy-full-logo.png">
+          <img class="logo-company" src="./assets/revy-full-logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -45,23 +45,23 @@
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
               <li class="nav-item">
-                <a class="nav-link" id="nav-home" aria-current="page" href="#">Home</a>
+                <a class="nav-link" id="nav-home" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" aria-current="page" href="#">Home</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" id="nav-about" onclick="scrollToElement('about-article')">About</a>
+                <a class="nav-link" id="nav-about" onclick="scrollToElement('about-article')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">About</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" id="nav-services" onclick="scrollToElement('service-title')">Services</a>
+                <a class="nav-link" id="nav-services" onclick="scrollToElement('service-title')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">Services</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" id="nav-gallery"  onclick="scrollToElement('gallery-title')">Gallery</a>
+                <a class="nav-link" id="nav-gallery"  onclick="scrollToElement('gallery-title')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">Gallery</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" id="nav-contactus" onclick="scrollToElement('contact-title')">Contact Us</a>
+                <a class="nav-link" id="nav-contactus" onclick="scrollToElement('contact-title')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">Contact Us</a>
               </li>
 
             </ul>
@@ -71,11 +71,27 @@
     </nav>
     <hr style="color: #66bc46;">
   </header>
+    <ul class="circles m-0 p-0">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>   
     
+    <div class="greet">
+        <div class="fading-text" id="changingText">Welcome!</div>
+      <a href="#contact-form" class="greet-contact">Contact Us</a>
+    </div>
   <main class="p-5" data-bs-spy="scroll" data-bs-target="#revynav">
 
     <article id="home-article" style="text-align: center;">
-      <img id="landinggif" style="margin-top:1cm; border-radius: 0.25cm;" src="./assets/landing.gif">
+      
   
   
 
@@ -499,7 +515,7 @@
 
       <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12">
-          <h3>Contact Form </h3>
+          <h3 id="contact-form">Contact Form </h3>
           <hr>
           <iframe width="100%"style="height:12cm" id="contform" src="contactUs.html"></iframe>
           <div class="thank" id="thank" hidden>
