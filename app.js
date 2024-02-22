@@ -28,22 +28,6 @@ iframe.addEventListener("load", function () {
   });
 });
 
-let items = document.querySelectorAll(".carousel .carousel-item");
-
-items.forEach((el) => {
-  const minPerSlide = 4;
-  let next = el.nextElementSibling;
-  for (var i = 1; i < minPerSlide; i++) {
-    if (!next) {
-      // wrap carousel by using first child
-      next = items[0];
-    }
-    let cloneChild = next.cloneNode(true);
-    el.appendChild(cloneChild.children[0]);
-    next = next.nextElementSibling;
-  }
-});
-
 // Get the button
 let mybutton = document.getElementById("myBtn");
 
@@ -51,14 +35,6 @@ let mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
   scrollFunction();
 };
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
 
 function vanitalinkedin() {
   var linkToOpen = "https://www.linkedin.com/in/vanita-prasad-92310551/";
@@ -113,66 +89,6 @@ addPaddingForMobile();
 // Listen for window resize events to update padding dynamically
 window.addEventListener("resize", addPaddingForMobile);
 
-window.addEventListener("scroll", function () {
-  var textElement6 = document.querySelector("#home-article");
-  var rect6 = textElement6.getBoundingClientRect();
-  var navInd6 = document.getElementById("nav-home");
-  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
-    navInd6.style.color = "#66bc46";
-    navInd6.style.textDecoration = "underline";
-  } else {
-    navInd6.style.color = "black";
-    navInd6.style.textDecoration = "none";
-  }
-});
-window.addEventListener("scroll", function () {
-  var textElement6 = document.querySelector("#about-article");
-  var rect6 = textElement6.getBoundingClientRect();
-  var navInd6 = document.getElementById("nav-about");
-  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
-    navInd6.style.color = "#66bc46";
-    navInd6.style.textDecoration = "underline";
-  } else {
-    navInd6.style.color = "black";
-    navInd6.style.textDecoration = "none";
-  }
-});
-window.addEventListener("scroll", function () {
-  var textElement6 = document.querySelector("#service-article");
-  var rect6 = textElement6.getBoundingClientRect();
-  var navInd6 = document.getElementById("nav-services");
-  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
-    navInd6.style.color = "#66bc46";
-    navInd6.style.textDecoration = "underline";
-  } else {
-    navInd6.style.color = "black";
-    navInd6.style.textDecoration = "none";
-  }
-});
-window.addEventListener("scroll", function () {
-  var textElement6 = document.querySelector("#gallery-article");
-  var rect6 = textElement6.getBoundingClientRect();
-  var navInd6 = document.getElementById("nav-gallery");
-  if (rect6.top <= window.innerHeight && rect6.bottom >= window.innerHeight) {
-    navInd6.style.color = "#66bc46";
-    navInd6.style.textDecoration = "underline";
-  } else {
-    navInd6.style.color = "black";
-    navInd6.style.textDecoration = "none";
-  }
-});
-window.addEventListener("scroll", function () {
-  var textElement6 = document.querySelector("#contact-us-article");
-  var rect6 = textElement6.getBoundingClientRect();
-  var navInd6 = document.getElementById("nav-contactus");
-  if (rect6.top <= window.innerHeight) {
-    navInd6.style.color = "#66bc46";
-    navInd6.style.textDecoration = "underline";
-  } else {
-    navInd6.style.color = "black";
-    navInd6.style.textDecoration = "none";
-  }
-});
 document.addEventListener("DOMContentLoaded", function () {
   const changingText = document.getElementById("changingText");
   const texts = [
