@@ -49,6 +49,10 @@ function bhaviklinkedin() {
     "https://www.linkedin.com/in/bhavikkumar-kathrani-11255013b/";
   window.open(linkToOpen, "_blank");
 }
+function gocontact() {
+  var linkToOpen = "contact.html";
+  window.location.href(linkToOpen);
+}
 
 function xeon() {
   var linkToOpen = "./assets/testimonials/4.png";
@@ -115,4 +119,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fadeInOut(); // Start the fading in and out process
 });
-

@@ -10,6 +10,13 @@ nav {
   font-weight: 600;
 }
 
+.green {
+  color: #66bc46;
+}
+.blue {
+  color: #4a99d3;
+}
+
 .labdiv > img {
   border: 1px solid #4a99d3;
   border-radius: 0.25cm;
@@ -187,7 +194,27 @@ h2 {
   color: #4a99d3;
   margin-bottom: 2vw;
   padding-top: 2cm;
-  text-align: left;
+}
+.carousel-caption h2 {
+  color: white;
+}
+.carousel-caption {
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 1cm 0 3cm 0;
+  border-radius: 0.2cm;
+  text-align: center;
+  margin-bottom: 8%;
+}
+.gotocont {
+  color: white;
+  background-color: rgb(71, 71, 244);
+  border: none;
+  padding: 0.2cm 0.4cm;
+  border-radius: 0.2cm;
+}
+.gotocont:hover {
+  color: white;
+  background-color: rgb(91, 91, 245);
 }
 .article-sub-title {
   color: #4a99d3;
@@ -417,6 +444,7 @@ h2 {
 
 footer {
   text-align: center;
+  font-size: 0.9rem;
   border-top-left-radius: 0.3cm;
   border-top-right-radius: 0.3cm;
 }
