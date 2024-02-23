@@ -38,6 +38,7 @@
       href="./assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <script defer src="hid.js"></script>
   </head>
   <body class="p-0 m-0 border-0 bd-example">
     <div class="icon-bar">
@@ -130,7 +131,13 @@
                 </li>
 
                 <li class="nav-item">
-                  <a style="text-decoration: underline;" class="nav-link" id="nav-about" href="about.html">About</a>
+                  <a
+                    style="text-decoration: underline"
+                    class="nav-link"
+                    id="nav-about"
+                    href="about.html"
+                    >About</a
+                  >
                 </li>
 
                 <li class="nav-item">
@@ -146,9 +153,13 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" id="nav-supportedBy" href="supportedBy.html"
+                  <a
+                    class="nav-link"
+                    id="nav-supportedBy"
+                    href="supportedBy.html"
                     >Supported By</a
                   >
+                </li>
 
                 <li class="nav-item">
                   <a class="nav-link" id="nav-contactus" href="contact.html"
@@ -178,104 +189,130 @@
         </p>
 
         <h2 class="article-sub-title">Management Team</h2>
-        <div class="team">
-          <p>
-            <span class="span-bold">Dr. Vanita Prasad</span> is an Environmental
-            Biotechnologist with more than 15 yrs. of experience in related
-            field. Having graduated in Science from University of Delhi, she
-            completed her Master's and Ph.D. in Biotechnology under Department
-            of Biotechnology and Central Scientific Industrial Research, Govt.
-            of India fellowships. Dr. Prasad has a long association with the
-            industry as Consultant Scientist while heading R&D functions of
-            various waste management companies. She hold patents for specific
-            innovation in the field of Waste management and Renewable energy.
-          </p>
 
-          <button class="linbutton" onclick="vanitalinkedin()">
-            <svg
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  fill="#ffffff"
-                  d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
-                ></path>
-              </g>
-            </svg>
-            Dr. Vanita Prasad
-          </button>
-        </div>
-        <div class="team">
-          <p>
-            <span class="span-bold">Mr. Rajneesh Prasad</span> is a Business
-            Management post graduate from Murdoch University, Australia with
-            over 20 years of corporate experience at various positions in MNCs
-            like Miles, Bayer and Siemens. His core expertise is in Strategic
-            planning, Project management, Marketing, Techno -Commercial
-            Negotiation, Legal and regulatory clearances.
-          </p>
+        <section class="team-section row hidden">
+          <div class="column1 col-lg-4 col-sm-12">
+            <img
+              src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+              alt="Profile Picture"
+            />
+            <button class="linbutton" onclick="vanitalinkedin()">
+              <svg
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#ffffff"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+              Dr. Vanita Prasad
+            </button>
+          </div>
+          <div class="column2 col-lg-8 col-sm-12">
+            <p>
+              <span class="span-bold">Dr. Vanita Prasad</span> is an
+              Environmental Biotechnologist with more than 15 yrs. of experience
+              in related field. Having graduated in Science from University of
+              Delhi, she completed her Master's and Ph.D. in Biotechnology under
+              Department of Biotechnology and Central Scientific Industrial
+              Research, Govt. of India fellowships. Dr. Prasad has a long
+              association with the industry as Consultant Scientist while
+              heading R&D functions of various waste management companies. She
+              hold patents for specific innovation in the field of Waste
+              management and Renewable energy.
+            </p>
+          </div>
+        </section>
 
-          <button class="linbutton" onclick="rajneeshlinkedin()">
-            <svg
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  fill="#ffffff"
-                  d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
-                ></path>
-              </g>
-            </svg>
-            Mr. Rajneesh Prasad
-          </button>
-        </div>
-        <div class="team">
-          <p>
-            <span class="span-bold">Mr. Bhavik Kathrani</span> is an Accounting
-            graduate with a rich experience in Finance, Accounting, Taxation and
-            Audits and support project accounting, procurement, Liaoning with
-            banks & statutory bodies and manages the business administration
-            part.
-          </p>
+        <section class="team-section row hidden">
+          <div class="column1 col-lg-4 col-sm-12">
+            <img
+              src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+              alt="Profile Picture"
+            />
+            <button class="linbutton" onclick="rajneeshlinkedin()">
+              <svg
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#ffffff"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+              Mr. Rajneesh Prasad
+            </button>
+          </div>
+          <div class="column2 col-lg-8 col-sm-12">
+            <p>
+              <span class="span-bold">Mr. Rajneesh Prasad</span> is a Business
+              Management post graduate from Murdoch University, Australia with
+              over 20 years of corporate experience at various positions in MNCs
+              like Miles, Bayer and Siemens. His core expertise is in Strategic
+              planning, Project management, Marketing, Techno -Commercial
+              Negotiation, Legal and regulatory clearances.
+            </p>
+          </div>
+        </section>
 
-          <button class="linbutton" onclick="bhaviklinkedin()">
-            <svg
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  fill="#ffffff"
-                  d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
-                ></path>
-              </g>
-            </svg>
-            Mr. Bhavik Kathrani
-          </button>
-        </div>
+        <section class="team-section row hidden">
+          <div class="column1 col-lg-4 col-sm-12">
+            <img
+              src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+              alt="Profile Picture"
+            />
+            <button class="linbutton" onclick="bhaviklinkedin()">
+              <svg
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#ffffff"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+              Mr. Bhavik Kathrani
+            </button>
+          </div>
+          <div class="column2 col-lg-8 col-sm-12">
+            <p>
+              <span class="span-bold">Mr. Bhavik Kathrani</span> is an
+              Accounting graduate with a rich experience in Finance, Accounting,
+              Taxation and Audits and support project accounting, procurement,
+              Liaoning with banks & statutory bodies and manages the business
+              administration part.
+            </p>
+          </div>
+        </section>
+
         <p>
           To implement our solutions, we work with various industry partners who
           have proven track record in the field of waste management. We leverage
