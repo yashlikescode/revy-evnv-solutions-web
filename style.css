@@ -365,6 +365,10 @@ h2 {
   width: 3cm;
   border-radius: 50%;
   margin-bottom: 0.5cm;
+  box-shadow: 0px 0px 16px 5px #4a99d3;
+}
+.column1 > img:hover {
+  box-shadow: 0px 0px 16px 5px #65bc46;
 }
 .column2 {
   padding-top: 0.5cm;
@@ -483,6 +487,103 @@ footer {
   color: white;
   background-color: rgb(91, 91, 245);
 }
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Adjust as needed */
+  padding: 20px; /* Adjust as needed */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.logos > img {
+  width: calc(25.33% - 20px); /* Adjust as needed */
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin: 0.5cm;
+  background-color: white;
+  aspect-ratio: 2/1;
+}
+.awardss {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carda {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #4a99d3;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 0.5cm;
+}
+
+.carda svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.carda:hover {
+  box-shadow: 0 8px 16px #65bc46;
+}
+
+.carda__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.carda:hover .carda__content {
+  transform: rotateX(0deg);
+}
+
+.carda__title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+.carda__subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: #5c5b5b;
+  font-weight: 650;
+}
+.carda__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  .logos > img {
+    width: calc(50% - 20px); /* Adjust as needed */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logos > img {
+    width: calc(90% - 20px); /* Adjust as needed */
+  }
+}
+
 @media (max-width: 600px) {
   .logo-company {
     width: 70vw;
