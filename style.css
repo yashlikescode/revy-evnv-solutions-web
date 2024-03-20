@@ -190,6 +190,11 @@ h3 {
   padding-top: 1cm;
   text-align: left;
 }
+.accordion-button,
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
 h2 {
   color: #4a99d3;
   margin-bottom: 1rem;
@@ -218,11 +223,11 @@ h2 {
 }
 .ul-serv {
   box-sizing: border-box;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
 }
 .li-serve {
-  padding: 0rem 1.3rem 0.8rem;
+  padding: 0rem 0rem 1rem 1rem;
   border-radius: 0.25cm;
   background: rgb(102, 188, 70, 0.3);
 }
