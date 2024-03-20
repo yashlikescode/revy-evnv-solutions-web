@@ -119,4 +119,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fadeInOut(); // Start the fading in and out process
 });
-
