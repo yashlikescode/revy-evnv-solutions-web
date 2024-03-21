@@ -51,10 +51,10 @@ a:hover {
   box-shadow: 0px 10px 0px 0px #4a99d3;
 }
 
-.prez-img{
-  border: solid 5px #4a99d3
+.prez-img {
+  border: solid 5px #4a99d3;
 }
-.prez-img:hover{
+.prez-img:hover {
   border: solid 5px #66bc46;
 }
 .redcard {
@@ -173,8 +173,8 @@ a:hover {
     border-radius: 50%;
   }
 }
-.page-title-line{
-  border-bottom:solid 1px #65bc46;
+.page-title-line {
+  border-bottom: solid 1px #65bc46;
 }
 .bubble {
   display: grid;
@@ -220,7 +220,6 @@ h2 {
 }
 .logo-company {
   width: 40vw;
-  padding: 1rem 0 1rem 0;
 }
 
 .span-bold {
