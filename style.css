@@ -270,6 +270,7 @@ h2 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 5;
+  transition: top 0.5s ease;
 }
 
 .icon-bar a {
