@@ -20,8 +20,11 @@ nav {
 .labdiv > img {
   border: 1px solid #4a99d3;
   border-radius: 0.25cm;
-  margin: 0.5cm;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1cm;
   width: 15vw;
+  height: 140px;
 }
 .labdiv {
   transition: transform 0.5s;
@@ -46,6 +49,13 @@ a:hover {
 .redcard:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 0px 0px #4a99d3;
+}
+
+.prez-img{
+  border: solid 5px #4a99d3
+}
+.prez-img:hover{
+  border: solid 5px #66bc46;
 }
 .redcard {
   border-radius: 0.4cm;
@@ -163,14 +173,16 @@ a:hover {
     border-radius: 50%;
   }
 }
+.page-title-line{
+  border-bottom:solid 1px #65bc46;
+}
 .bubble {
   display: grid;
   place-items: center;
-  background-color: #66bc46;
-  color: white;
+  color: #4a99d3;
   z-index: -1;
-  padding-top: 9vh;
-  height: 25vh;
+  padding-top: 13vh;
+  height: 30vh;
 }
 @media (max-width: 600px) {
   .bubble {
