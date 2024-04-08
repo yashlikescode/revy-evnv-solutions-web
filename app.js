@@ -70,6 +70,14 @@ function pepsico() {
   var linkToOpen = "./assets/testimonials/2.jpg";
   window.open(linkToOpen, "_blank");
 }
+function kspHydro() {
+  var linkToOpen = "./assets/testimonials/kspHydro.jpg";
+  window.open(linkToOpen, "_blank");
+}
+function greenEnv() {
+  var linkToOpen = "./assets/testimonials/greenEnvServices.jpg";
+  window.open(linkToOpen, "_blank");
+}
 
 function addPaddingForMobile() {
   var targetElement = document.getElementById("revynav");
