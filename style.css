@@ -528,14 +528,14 @@ footer {
 
 .carousel-caption h2 {
   color: white;
-  padding-top:1cm;
+  padding:0;
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0cm 0 1cm 0;
+  padding: 0.5cm 0 0.5cm 0;
   border-radius: 0.2cm;
   text-align: center;
-  margin-bottom: 6%;
+  margin-bottom: 2%;
 }
 .gotocont {
   color: white;

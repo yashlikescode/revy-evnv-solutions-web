@@ -98,33 +98,23 @@ function addPaddingForMobile() {
 // Initial call to set padding on page load
 addPaddingForMobile();
 
-// Listen for window resize events to update padding dynamically
-window.addEventListener("resize", addPaddingForMobile);
-
-document.addEventListener("DOMContentLoaded", function () {
-  const changingText = document.getElementById("changingText");
-  const texts = [
-    "Are You Concerned About Your Biogas Plant's Efficiency?",
-    "Are You Facing Challenges in STP Management?",
-    "Having Issues in  ETP Operations?",
-  ];
-
-  let index = 0;
-
-  function changeText() {
-    changingText.textContent = texts[index];
-    index = (index + 1) % texts.length;
+var stoppedCar = false; // carousel is sliding
+var iid;
+var ni;
+function carouselClick(n) {
+  ni = n;
+  if (!stoppedCar) {
+    stoppedCar = true;
+    iid = setInterval(clickCarButton, 3000); // Start the interval
+  } else {
+    stoppedCar = false;
+    clearInterval(iid); // Stop the interval
   }
+}
 
-  function fadeInOut() {
-    changingText.style.opacity = 1;
-    setTimeout(function () {
-      changingText.style.opacity = 0;
-      setTimeout(changeText, 1000); // Change text after fade out
-      setTimeout(fadeInOut, 1000); // Call fadeInOut again after changing text
-    }, 3000); // Wait for 3 seconds before starting fade out
-  }
-
-  fadeInOut(); // Start the fading in and out process
-});
-  
+function clickCarButton(n) {
+  if (ni == 1) document.getElementById(`gotocar1`).click();
+  else if (ni == 2) document.getElementById(`gotocar2`).click();
+  else if (ni == 3) document.getElementById(`gotocar3`).click();
+  else if (ni == 4) document.getElementById(`gotocar4`).click();
+}
