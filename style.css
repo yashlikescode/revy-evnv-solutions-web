@@ -25,6 +25,7 @@ nav {
   margin-bottom: 1cm;
   width: 15vw;
   height: 140px;
+  object-fit: cover;
 }
 .labdiv {
   transition: transform 0.5s;
@@ -182,7 +183,7 @@ a:hover {
   color: #4a99d3;
   z-index: -1;
   padding-top: 13vh;
-  height: 30vh;
+  height: 15vh;
 }
 @media (max-width: 600px) {
   .bubble {

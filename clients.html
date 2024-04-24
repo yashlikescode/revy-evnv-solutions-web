@@ -38,36 +38,161 @@
       href="./assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <style>
+      .scroller {
+        max-width: 100%;
+      }
+
+      .scroller__inner {
+        padding-block: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .scroller__inner > img {
+        height: 100px;
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-top: 1cm;
+      }
+
+      .scroller[data-animated="true"] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(
+          90deg,
+          transparent,
+          white 20%,
+          white 80%,
+          transparent
+        );
+        mask: linear-gradient(
+          90deg,
+          transparent,
+          white 20%,
+          white 80%,
+          transparent
+        );
+      }
+
+      .scroller[data-animated="true"] .scroller__inner {
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll var(--_animation-duration, 40s)
+          var(--_animation-direction, forwards) linear infinite;
+      }
+
+      .scroller[data-direction="right"] {
+        --_animation-direction: reverse;
+      }
+
+      .scroller[data-direction="left"] {
+        --_animation-direction: forwards;
+      }
+
+      .scroller[data-speed="fast"] {
+        --_animation-duration: 20s;
+      }
+
+      .scroller[data-speed="slow"] {
+        --_animation-duration: 60s;
+      }
+
+      @keyframes scroll {
+        to {
+          transform: translate(calc(-50% - 0.5rem));
+        }
+      }
+      .tag-list {
+        margin: 0;
+        padding-inline: 0;
+        list-style: none;
+      }
+
+      .tag-list li {
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+    </style>
   </head>
   <body class="p-0 m-0 border-0 bd-example">
-<div class="icon-bar">
+    <div class="icon-bar">
       <a
         target="_blank"
         href="https://www.facebook.com/REVYEnvironment"
         style="border-radius: 0 0.25cm 0 0"
         class="facebook"
-        ><svg style="height: 0.55cm;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
+        ><svg
+          style="height: 0.55cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#ffffff"
+            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+          /></svg
+      ></a>
       <a
         target="_blank"
         href="https://twitter.com/REVYEnvironment"
         class="twitter"
-        ><svg style="height: 0.55cm;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f6f7f8" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+        ><svg
+          style="height: 0.55cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#f6f7f8"
+            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+          /></svg
+      ></a>
       <a
         target="_blank"
         href="https://www.instagram.com/revy_espl/"
         class="instagram"
-        ><svg style="height: 0.55cm;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f9fafb" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        ><svg
+          style="height: 0.55cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#f9fafb"
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          /></svg
+      ></a>
       <a
         target="_blank"
         href="https://www.linkedin.com/company/revy-environmental-solutions-pvt-ltd/"
         class="linkedin"
-        ><svg style="height: 0.55cm;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f7f7f8" d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg></a>
+        ><svg
+          style="height: 0.55cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#f7f7f8"
+            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+          /></svg
+      ></a>
       <a
         target="_blank"
         href="https://www.youtube.com/channel/UCA8BgqvdfUuisECWkwlcr6A"
         style="border-radius: 0 0 0.25cm 0"
         class="youtube"
-        ><svg style="width: 0.6cm;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#f7f7f7" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></a>
+        ><svg
+          style="width: 0.6cm"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+        >
+          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#f7f7f7"
+            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+          /></svg
+      ></a>
     </div>
     <a href="#"><button id="myBtn" title="Go to top">Top</button></a>
     <!-- Example Code -->
@@ -129,10 +254,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    id="nav-services"
-                    href="services.html"
+                  <a class="nav-link" id="nav-services" href="services.html"
                     >Products & Services</a
                   >
                 </li>
@@ -168,47 +290,48 @@
 
     <main>
       <article id="services-article">
-        <section class="bubble">
-        </section>
+        <section class="bubble"></section>
         <section style="margin-left: 9vw; margin-right: 9vw">
-          <div style="margin-top: 1cm">
-            <!-- 
-   PROGRESSIVELY ENHANCED
-   If a user has `prefers-reduced-motion: reduced`, there will be no animation
-   and the items will wrap, instead of being hidden.
-   If they have not opted for reduced motion, the items will be duplicated with JS
-   and the duplicated content will have `aria-hidden="true"` to prevent duplicate content
-   for screen readers.
-   If a user has JS disabled or it fails for whatever reason, they will get the same 
-   experience as a user with `prefers-reduced-motion: reduced`, so no content is hidden,
-   and there is no animation.
-   
-   === OPTIONS ===
-   CONTROL SPEED 
-   If you don't assign anything, it will use a default speed.
-   To change the speed, on the `.scroller`
-   you can use `data-speed="fast"` or `data-speed="slow"
+          <h2 style="text-align: center">Our Clients</h2>
 
-   CONTROL DIRECTION 
-   By default, it will scroll from right to left.
-   To change the direction, on the `.scroller`
-   you can use `data-direction="right"` (`data-direction="left" also works, but it is the default) 
--->
+          <div class="scroller" data-direction="left" data-speed="slow">
+            <div class="scroller__inner">
+              <img src="/assets/clients/1Child In Need Institute.png" alt="" />
+              <img src="/assets/clients/2Daystar.webp" alt="" />
+              <img src="/assets/clients/3paques.png" alt="" />
+              <img src="/assets/clients/4pepsico.png" alt="" />
+              <img src="/assets/clients/5Xeon Waste Management.jpg" alt="" />
+              <img src="/assets/clients/6Aditya birla - Grasaim.webp" alt="" />
+            </div>
+          </div>
 
-<h1 style="text-align: center">Infinite Scroll Animation</h1>
+          <div class="scroller" data-direction="right" data-speed="slow">
+            <div class="scroller__inner">
+              <img src="/assets/clients/7ALPS.png" alt="" />
+              <img src="/assets/clients/8Banas Dairy.png" alt="" />
+              <img src="/assets/clients/9farmgas.jpg" alt="" />
+              <img src="/assets/clients/10grassroots energy.png" alt="" />
+              <img src="/assets/clients/11manpasand.gif" alt="" />
+              <img src="/assets/clients/12Rayban.png" alt="" />
+            </div>
+          </div>
 
-<div class="scroller" data-speed="fast">
-  <ul class="tag-list scroller__inner">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JS</li>
-    <li>SSG</li>
-    <li>webdev</li>
-    <li>animation</li>
-    <li>UI/UX</li>
-  </ul>
-</div>
-        <div class="testimonials row">
+          <div class="scroller" data-direction="left" data-speed="slow">
+            <div class="scroller__inner">
+              <img src="/assets/clients/13Reliance.jpg" alt="" />
+              <img src="/assets/clients/14sampurna earth.png" alt="" />
+              <img src="/assets/clients/15Sistema Bio.png" alt="" />
+              <img src="/assets/clients/16stagot.jpg" alt="" />
+              <img
+                src="/assets/clients/17the green environment services Co-op society Ltd..png"
+                alt=""
+              />
+              <img src="/assets/clients/18Transpek silos.png" alt="" />
+              <img src="/assets/clients/19Zytex.png" alt="" />
+            </div>
+          </div>
+
+          <div class="testimonials row">
             <h2>Testimonials</h2>
             <div class="testcard col-5" onclick="transpeck()">
               <h3 class="testcard__title">Transpek-Silox (UASB)</h3>
@@ -310,8 +433,9 @@
             <div class="testcard col-5" onclick="kspHydro()">
               <h3 class="testcard__title">KSP Hydro Engineers Pvt. Ltd.</h3>
               <p class="testcard__content">
-                "Product from REVY has helped us to achieve fastest commissioning
-                and saved half of our time by allowing us to reduce the cost by 50% ..."
+                "Product from REVY has helped us to achieve fastest
+                commissioning and saved half of our time by allowing us to
+                reduce the cost by 50% ..."
               </p>
 
               <div class="testcard__arrow">
@@ -333,7 +457,9 @@
             <div class="testcard col-5" onclick="greenEnv()">
               <h3 class="testcard__title">The Green Env. Services</h3>
               <p class="testcard__content">
-                "The technology develped by REVY will help aid sustainable management of waste as well as waste water and will help combat climate change and its impacts ..."
+                "The technology develped by REVY will help aid sustainable
+                management of waste as well as waste water and will help combat
+                climate change and its impacts ..."
               </p>
 
               <div class="testcard__arrow">
@@ -353,62 +479,7 @@
             </div>
           </div>
 
-          <h2>Infrastructure & Lab Setup</h2>
-          <div style="margin: 0; padding: 0" class="container-fluid">
-            <div style="margin: 0; padding: 0" class="row">
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab1.png" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab2.png" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab3.png" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab4.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab5.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab6.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/lab7.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/15.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/2.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/3.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/8.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/12.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/10.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/11.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/12.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/13.jpg" />
-              </div>
-              <div style="margin: 0; padding: 0" class="labdiv col-3">
-                <img src="./assets/lab-setup/14.jpg" />
-              </div>
-            </div>
-          </div>
+          
         </section>
       </article>
     </main>
@@ -420,6 +491,34 @@
         CINU74999GJ2017PTC098509. All rights reserved.
       </div>
     </footer>
+    <script>
+      const scrollers = document.querySelectorAll(".scroller");
+
+      // If a user hasn't opted in for recuded motion, then we add the animation
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+      }
+
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          // add data-animated="true" to every `.scroller` on the page
+          scroller.setAttribute("data-animated", true);
+
+          // Make an array from the elements within `.scroller-inner`
+          const scrollerInner = scroller.querySelector(".scroller__inner");
+          const scrollerContent = Array.from(scrollerInner.children);
+
+          // For each item in the array, clone it
+          // add aria-hidden to it
+          // add it into the `.scroller-inner`
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        });
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -432,5 +531,5 @@
     ></script>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
