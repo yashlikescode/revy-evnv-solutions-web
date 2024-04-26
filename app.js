@@ -49,35 +49,12 @@ function bhaviklinkedin() {
     "https://www.linkedin.com/in/bhavikkumar-kathrani-11255013b/";
   window.open(linkToOpen, "_blank");
 }
+
 function gocontact() {
   var linkToOpen = "contact.html";
   window.location.href(linkToOpen);
 }
 
-function xeon() {
-  var linkToOpen = "./assets/testimonials/4.png";
-  window.open(linkToOpen, "_blank");
-}
-function stagot() {
-  var linkToOpen = "./assets/testimonials/3.png";
-  window.open(linkToOpen, "_blank");
-}
-function transpeck() {
-  var linkToOpen = "./assets/testimonials/1.png";
-  window.open(linkToOpen, "_blank");
-}
-function pepsico() {
-  var linkToOpen = "./assets/testimonials/2.jpg";
-  window.open(linkToOpen, "_blank");
-}
-function kspHydro() {
-  var linkToOpen = "./assets/testimonials/kspHydro.jpg";
-  window.open(linkToOpen, "_blank");
-}
-function greenEnv() {
-  var linkToOpen = "./assets/testimonials/greenEnvServices.jpg";
-  window.open(linkToOpen, "_blank");
-}
 
 function addPaddingForMobile() {
   var targetElement = document.getElementById("revynav");
