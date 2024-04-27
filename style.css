@@ -220,7 +220,7 @@ h2 {
   margin-bottom: 1rem;
 }
 .logo-company {
-  width: 35vw;
+  width: 450px;
 }
 
 .span-bold {
@@ -461,6 +461,16 @@ place-items:center;
   transform: translateX(0%);
 }
 
+.hiddenv {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateY(30%);
+}
+.showv {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 /* this card is inspired form this - https://georgefrancis.dev/ */
 
 .testcard {
@@ -568,11 +578,9 @@ footer {
   flex-wrap: wrap;
   justify-content: center; /* Adjust as needed */
   padding: 20px; /* Adjust as needed */
-  margin-left: 10%;
-  margin-right: 10%;
 }
 .logos > img {
-  width: 250px;
+  width: 150px;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -724,9 +732,13 @@ footer {
 .textq-body {
   font-size: 0.9em;
   padding-bottom: 10px;
+  height:2cm;
+  display: grid;
+  place-items: center;
   text-align: justify;
   color: black;
 }
+
 .scroller {
   max-width: 600px;
 }
@@ -795,7 +807,12 @@ footer {
   line-height: 20px;
   color: #000000;
 }
-
+.pat-flag{
+  width: 40%;
+  object-fit: cover;
+  margin-bottom:10px;
+  border-radius:0.2cm;
+}
 .cardp p.small {
   font-size: 14px;
 }
@@ -832,7 +849,7 @@ footer {
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-  height:180px;
+  height:220px;
 }
 
 .cardp1:before {
@@ -865,6 +882,7 @@ footer {
   height: 300px;
   perspective: 1000px;
   font-family: sans-serif;
+  margin-top:1cm;
 }
 
 .title {
