@@ -883,7 +883,7 @@ footer {
   max-width: 480px;
   perspective: 1000px;
   font-family: sans-serif;
-  margin-top:1cm;
+  margin-bottom:1cm;
 }
 
 .title {
