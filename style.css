@@ -943,3 +943,12 @@ footer {
   border-radius:0.5cm;
   object-fit: cover;
 }
+.media-vids>div{
+  margin-bottom:1cm;
+}
+.media-vids>div>iframe{
+  box-shadow: 2px 2px 5px 2px #888888;
+}
+.media-vids>div>iframe:hover{
+  box-shadow: 4px 4px 5px 2px #888888;
+}
