@@ -657,7 +657,10 @@ footer {
   color: #000000;
   line-height: 1.4;
 }
-
+.home-youtube-landing{
+  width:890px;
+  height:500px;
+}
 @media screen and (max-width: 768px) {
   .logos > img {
     width: calc(50% - 20px); /* Adjust as needed */
@@ -688,6 +691,10 @@ footer {
   .carousel-caption {
     margin-bottom: 75%;
   }
+  .home-youtube-landing{
+  width:90%;
+  height:auto;
+}
 }
 
 .misvis {
