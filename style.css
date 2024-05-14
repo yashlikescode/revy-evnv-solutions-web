@@ -674,6 +674,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .awardss{
+      width: 100%;
+  margin-left:10%;
+  margin-right:10%;
+  }
+  .fbh-scroll{
+    overflow-x:scroll;
+  }
   .logo-company {
     width: 70vw;
     padding: 1rem 0rem 1rem 0rem;
@@ -695,8 +703,17 @@ footer {
   width:90%;
   height:auto;
 }
+.labdiv {
+  margin:0.3cm;
+  width:70vw;
+}
 }
 
+.fb-post{
+  margin-top:0.5cm;
+  display: grid;
+  place-items:center;
+}
 .misvis {
   display: flex;
   gap: 0.5cm;
