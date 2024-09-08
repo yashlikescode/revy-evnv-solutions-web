@@ -29,8 +29,7 @@ nav {
   transition: transform 0.5s;
 }
 .labdiv {
-  margin:0.3cm;
-  width:18vw;
+  width:20vw;
 }
 
 .labdiv > img:hover {
@@ -712,7 +711,7 @@ footer {
 }
 
 .fb-post{
-  margin-top:0.5cm;
+  margin-top:1cm;
   display: grid;
   place-items:center;
 }
