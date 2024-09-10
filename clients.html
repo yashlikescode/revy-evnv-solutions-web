@@ -208,7 +208,7 @@
       >
         <div class="container-fluid">
           <a class="navbar-brand navv" href="./index.html">
-            <img class="logo-company" src="./assets/revy-full-logo.png" />
+            <img class="logo-company" src="./assets/revy-full-logo.webp" />
           </a>
           <button
             class="navbar-toggler"
@@ -296,37 +296,37 @@
 
           <div class="scroller" data-direction="left" data-speed="slow">
             <div class="scroller__inner">
-              <img src="/assets/clients/4pepsico.png" alt="" />
-              <img src="/assets/clients/5Xeon Waste Management.jpg" alt="" />
+              <img src="/assets/clients/4pepsico.webp" alt="" />
+              <img src="/assets/clients/5Xeon Waste Management.webp" alt="" />
               <img src="/assets/clients/6Aditya birla - Grasaim.webp" alt="" />
-              <img src="/assets/clients/20wmc.png" alt="" />
-              <img src="/assets/clients/21techno.png" alt="" />
+              <img src="/assets/clients/20wmc.webp" alt="" />
+              <img src="/assets/clients/21techno.webp" alt="" />
             </div>
           </div>
 
           <div class="scroller" data-direction="right" data-speed="slow">
             <div class="scroller__inner">
-              <img src="/assets/clients/7ALPS.png" alt="" />
-              <img src="/assets/clients/8Banas Dairy.png" alt="" />
-              <img src="/assets/clients/9farmgas.jpg" alt="" />
-              <img src="/assets/clients/10grassroots energy.png" alt="" />
-              <img src="/assets/clients/11manpasand.gif" alt="" />
+              <img src="/assets/clients/7ALPS.webp" alt="" />
+              <img src="/assets/clients/8Banas Dairy.webp" alt="" />
+              <img src="/assets/clients/9farmgas.webp" alt="" />
+              <img src="/assets/clients/10grassroots energy.webp" alt="" />
+              <img src="/assets/clients/11manpasand.webp" alt="" />
             </div>
           </div>
 
           <div class="scroller" data-direction="left" data-speed="slow">
             <div class="scroller__inner">
-              <img src="/assets/clients/13Reliance.jpg" alt="" />
-              <img src="/assets/clients/14sampurna earth.png" alt="" />
-              <img src="/assets/clients/15Sistema Bio.png" alt="" />
-              <img src="/assets/clients/16stagot.jpg" alt="" />
+              <img src="/assets/clients/13Reliance.webp" alt="" />
+              <img src="/assets/clients/14sampurna earth.webp" alt="" />
+              <img src="/assets/clients/15Sistema Bio.webp" alt="" />
+              <img src="/assets/clients/16stagot.webp" alt="" />
               <img
-                src="/assets/clients/17the green environment services Co-op society Ltd..png"
+                src="/assets/clients/17the green environment services Co-op society Ltd..webp"
                 alt=""
               />
-              <img src="/assets/clients/18Transpek silos.png" alt="" />
-              <img src="/assets/clients/19Zytex.png" alt="" />
-              <img src="/assets/clients/22daystar.jpeg" alt="" />
+              <img src="/assets/clients/18Transpek silos.webp" alt="" />
+              <img src="/assets/clients/19Zytex.webp" alt="" />
+              <img src="/assets/clients/22daystar.webp" alt="" />
             </div>
           </div>
          <br> 
@@ -548,33 +548,32 @@
       </div>
     </footer>
     <script>
-      const scrollers = document.querySelectorAll(".scroller");
+const scrollers = document.querySelectorAll(".scroller");
 
-      // If a user hasn't opted in for recuded motion, then we add the animation
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-      }
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
 
-      function addAnimation() {
-        scrollers.forEach((scroller) => {
-          // add data-animated="true" to every `.scroller` on the page
-          scroller.setAttribute("data-animated", true);
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
 
-          // Make an array from the elements within `.scroller-inner`
-          const scrollerInner = scroller.querySelector(".scroller__inner");
-          const scrollerContent = Array.from(scrollerInner.children);
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
 
-          // For each item in the array, clone it
-          // add aria-hidden to it
-          // add it into the `.scroller-inner`
-          scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-          });
-        });
-      }
-
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
 
 function xeon() {
   var linkToOpen = "./assets/testimonials/4.png";
