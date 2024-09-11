@@ -10,7 +10,11 @@ nav {
   color: #66bc46;
   font-weight: 600;
 }
-
+#revynav{
+  border-bottom: 1px solid #66bc46;
+  position: fixed;
+  padding: 0% 5% 0% 4.5% !important;
+}
 .green {
   color: #66bc46;
 }
