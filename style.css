@@ -10,7 +10,7 @@ nav {
   color: #66bc46;
   font-weight: 600;
 }
-#revynav{
+#revynav {
   border-bottom: 1px solid #66bc46;
   position: fixed;
   padding: 0% 5% 0% 4.5% !important;
@@ -29,16 +29,16 @@ nav {
   margin: 0;
   height: 180px;
   object-fit: cover;
-  width:100%;
+  width: 100%;
   transition: transform 0.5s;
 }
 .labdiv {
-  width:20vw;
+  width: 20vw;
 }
 
 .labdiv > img:hover {
   border: 5px solid #66bc46;
-    -ms-transform: scale(1.1); /* IE 9 */
+  -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1);
 }
@@ -51,9 +51,18 @@ a:hover {
   color: #66bc46;
 }
 
-.redcard:hover {
+
+#counter-container:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 0px 0px #4a99d3;
+}
+#redcard2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 0px 0px #FBC412;
+}
+#redcard3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 0px 0px #47773D;
 }
 
 .prez-img {
@@ -63,6 +72,7 @@ a:hover {
   border: solid 5px #66bc46;
 }
 .redcard {
+  padding-top:0.5cm;
   border-radius: 0.4cm;
   transition: transform 0.25s, box-shadow 0.25s;
 }
@@ -364,7 +374,7 @@ h2 {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: 0.3s ease;
   margin-bottom: 0.4cm;
-  width:fit-content;
+  width: fit-content;
 }
 .linbutton2 {
   display: flex;
@@ -405,22 +415,22 @@ h2 {
 
 .profile-links {
   margin-top: 0.5cm;
-display:grid;
-place-items:center;
+  display: grid;
+  place-items: center;
   gap: 0.2cm;
 }
-.profile-links>a{
+.profile-links > a {
   text-decoration: none;
 }
-.contact-span {    
-    text-decoration: none;
-    opacity:50%;
+.contact-span {
+  text-decoration: none;
+  opacity: 50%;
 }
-.dotted-border-span{
- border-bottom: 1px dotted #000;
+.dotted-border-span {
+  border-bottom: 1px dotted #000;
 }
-.contact-span:hover {    
-    opacity:70%;
+.contact-span:hover {
+  opacity: 70%;
 }
 
 .team-section {
@@ -558,11 +568,12 @@ footer {
 
 .carousel-caption h2 {
   color: white;
-  padding:0;
+  padding: 0;
 }
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 0.5cm 0 0.5cm 0;
+  padding: 0.2cm 0 0.1cm 0;
+  margin: 1cm;
   border-radius: 0.2cm;
   text-align: center;
   margin-bottom: 2%;
@@ -591,7 +602,7 @@ footer {
   box-sizing: border-box;
   margin: 0.5cm;
   background-color: white;
-  padding:5px;
+  padding: 5px;
   object-fit: contain;
 }
 .awardss {
@@ -662,9 +673,9 @@ footer {
   color: #000000;
   line-height: 1.4;
 }
-.home-youtube-landing{
-  width:890px;
-  height:500px;
+.home-youtube-landing {
+  width: 890px;
+  height: 500px;
 }
 @media screen and (max-width: 768px) {
   .logos > img {
@@ -679,13 +690,13 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .awardss{
-      width: 100%;
-  margin-left:10%;
-  margin-right:10%;
+  .awardss {
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  .fbh-scroll{
-    overflow-x:scroll;
+  .fbh-scroll {
+    overflow-x: scroll;
   }
   .logo-company {
     width: 70vw;
@@ -704,20 +715,20 @@ footer {
   .carousel-caption {
     margin-bottom: 75%;
   }
-  .home-youtube-landing{
-  width:90%;
-  height:auto;
-}
-.labdiv {
-  margin:0.3cm;
-  width:70vw;
-}
+  .home-youtube-landing {
+    width: 90%;
+    height: auto;
+  }
+  .labdiv {
+    margin: 0.3cm;
+    width: 70vw;
+  }
 }
 
-.fb-post{
-  margin-top:1cm;
+.fb-post {
+  margin-top: 1cm;
   display: grid;
-  place-items:center;
+  place-items: center;
 }
 .misvis {
   display: flex;
@@ -761,7 +772,7 @@ footer {
 .textq-body {
   font-size: 0.9em;
   padding-bottom: 10px;
-  height:2cm;
+  height: 2cm;
   display: grid;
   place-items: center;
   text-align: justify;
@@ -836,11 +847,11 @@ footer {
   line-height: 20px;
   color: #000000;
 }
-.pat-flag{
+.pat-flag {
   width: 40%;
   object-fit: cover;
-  margin-bottom:10px;
-  border-radius:0.2cm;
+  margin-bottom: 10px;
+  border-radius: 0.2cm;
 }
 .cardp p.small {
   font-size: 14px;
@@ -878,7 +889,7 @@ footer {
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-  height:220px;
+  height: 220px;
 }
 
 .cardp1:before {
@@ -905,14 +916,13 @@ footer {
   color: rgb(255, 255, 255);
 }
 
-
 .flip-card {
   background-color: white;
   height: 300px;
   max-width: 480px;
   perspective: 1000px;
   font-family: sans-serif;
-  margin-bottom:1cm;
+  margin-bottom: 1cm;
 }
 
 .title {
@@ -936,9 +946,10 @@ footer {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   background-color: white;
-  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -947,43 +958,49 @@ footer {
   border: 1px solid coral;
   border-radius: 1rem;
 }
-.flip-card-front{
+.flip-card-front {
   overflow: hidden;
   background-color: white;
-
 }
 .flip-card-back {
   transform: rotateY(180deg);
   display: grid;
   background-color: white;
-  place-items:center;
+  place-items: center;
 }
-.flip-card-back>table,th,td{
-  border:solid black 1px;
+.flip-card-back > table,
+th,
+td {
+  border: solid black 1px;
 }
-.flip-card-back>table{
-  margin:0.5cm;;
+.flip-card-back > table {
+  margin: 0.5cm;
 }
-.flip-card-front>.title{
-  position:absolute;
-  bottom:0.2cm;
+.flip-card-front > .title {
+  position: absolute;
+  bottom: 0.2cm;
 }
-.flip-front-img{
-  height:70%;
+.flip-front-img {
+  height: 70%;
   object-fit: cover;
-
 }
-.flip-front-img-inner{
+.flip-front-img-inner {
   height: 150px;
-  border-radius:0.5cm;
+  border-radius: 0.5cm;
   object-fit: cover;
 }
-.media-vids>div{
-  margin-bottom:1cm;
+.media-vids > div {
+  margin-bottom: 1cm;
 }
-.media-vids>div>iframe{
+.media-vids > div > iframe {
   box-shadow: 2px 2px 5px 2px #888888;
 }
-.media-vids>div>iframe:hover{
+.media-vids > div > iframe:hover {
   box-shadow: 4px 4px 5px 2px #888888;
+}
+.counter-label{
+  display:flex;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 600;
 }
