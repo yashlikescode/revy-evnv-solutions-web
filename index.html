@@ -287,7 +287,8 @@
 
     <main class="p-5" data-bs-spy="scroll" data-bs-target="#revynav">
       <article id="home-article" style="text-align: center">
-        <div class="recycle-reuse row justify-content-center">
+        <h2>Innovation and Impact</h2>
+        <div class="recycle-reuse row justify-content-center" style="margin-bottom:2cm;">
           <div
             class="card redcard col-lg-2 col-md-3 col-sm-5"
             style="
@@ -296,24 +297,23 @@
               align-items: center;
               justify-content: center;
             "
+            id='counter-container'
           >
             <img
               style="height: 10rem; width: 11rem"
-              src="./assets/reduce.webp"
+              src="./assets/waterSanitation.jpg"
               class="card-img-t"
               alt="..."
             />
             <div class="card-body hiddenv">
-              <h5 class="card-title p-reduce" style="color: #4a99d3">Reduce</h5>
-              <p class="card-text p-reduce">
-                Reducing the amount of waste one produces in the first place is
-                a great first step and should involve everybody.
-              </p>
+              <h5 class="card-title p-reduce" style="color: #4a99d3">Used Water Treated (ML)</h5>
+              <div class="counter-label"><div class="counter" data-target="5502">0</div> +</div>
             </div>
           </div>
 
           <div
             class="card redcard col-lg-2 col-md-3 col-sm-5"
+            id="redcard2"
             style="
               margin: 1cm;
               display: flex;
@@ -323,21 +323,20 @@
           >
             <img
               style="height: 10rem; width: 10.5rem"
-              src="./assets/reuse.webp"
+              src="./assets/cleanEnergy.jpg"
               class="card-img-t"
               alt="..."
             />
             <div class="card-body hiddenv">
-              <h5 class="card-title p-reduce" style="color: #4a99d3">Reuse</h5>
-              <p class="card-text p-reduce">
-                Reusing resources can help a business save money while
-                decreasing its ecological footprint.
-              </p>
+              <h5 class="card-title p-reduce" style="color: #FBC412">Organic Waste Treated (Tons)</h5>
+              <div class="counter-label"><div class="counter" data-target="427102">0</div> +</div>
             </div>
           </div>
 
           <div
             class="card redcard col-lg-2 col-md-3 col-sm-5"
+            
+            id="redcard3"
             style="
               margin: 1cm;
               display: flex;
@@ -347,44 +346,15 @@
           >
             <img
               style="height: 10rem; width: 10.5rem"
-              src="./assets/recycle.webp"
+              src="./assets/climateAction.jpg"
               class="card-img-t"
               alt="..."
             />
             <div class="card-body hiddenv">
-              <h5 class="card-title p-reduce" style="color: #4a99d3">
-                Recycle
+              <h5 class="card-title p-reduce" style="color: #47773D">
+                GHG Mitigation (mCO2/t)
               </h5>
-              <p class="card-text p-reduce">
-                Recycling is the key to preservation of natural resources and
-                benefits for businesses.
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="card redcard col-lg-2 col-md-3 col-sm-5"
-            style="
-              margin: 1cm;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            "
-          >
-            <img
-              style="height: 10rem; width: 10rem"
-              src="./assets/recover.webp"
-              class="card-img-t"
-              alt="..."
-            />
-            <div class="card-body hiddenv">
-              <h5 class="card-title p-reduce" style="color: #4a99d3">
-                Recover
-              </h5>
-              <p class="card-text p-reduce">
-                Recovery includes any process that converts waste material into
-                energy which may contain a higher energy value.
-              </p>
+              <div class="counter-label"><div class="counter" data-target="1911">0</div> +</div>
             </div>
           </div>
         </div>
@@ -418,5 +388,52 @@
     <script src="./bootstrap.bundle.js"></script>
     <script src="app.js"></script>
     <script src="hid.js"></script>
+    <script>
+      const triggerCounter = () =>{
+  const counters = document.querySelectorAll(".counter");
+  const speed = 200; // The lower the slower
+
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText;
+
+      // Lower inc to slow and higher to slow
+      const inc = target / speed;
+
+      // console.log(inc);
+      // console.log(count);
+
+      // Check if target is reached
+      if (count < target) {
+        // Add inc to count and output in counter
+        counter.innerText = Math.round(count + inc);
+        // Call function every ms
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+}
+
+// Create an IntersectionObserver
+const observer3 = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      triggerCounter();  // Call the function when the div is in the viewport
+      observer.unobserve(entry.target);  // Stop observing after it's visible
+    }
+  });
+}, {
+  threshold: 0.5  // The div is considered visible when 50% of it is in the viewport
+});
+
+// Start observing the target div
+const targetDiv = document.getElementById('counter-container');
+observer3.observe(targetDiv);
+    </script>
   </body>
 </html>
