@@ -94,6 +94,7 @@ function clickCarButton(n) {
   else if (ni == 2) document.getElementById(`gotocar2`).click();
   else if (ni == 3) document.getElementById(`gotocar3`).click();
   else if (ni == 4) document.getElementById(`gotocar4`).click();
+  else if (ni == 5) document.getElementById(`gotocar5`).click();
 }
 
 
