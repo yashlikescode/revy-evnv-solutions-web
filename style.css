@@ -51,9 +51,18 @@ a:hover {
   color: #66bc46;
 }
 
-.redcard:hover {
+
+#counter-container:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 0px 0px #4a99d3;
+}
+#redcard2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 0px 0px #FBC412;
+}
+#redcard3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 0px 0px #47773D;
 }
 
 .prez-img {
@@ -63,6 +72,7 @@ a:hover {
   border: solid 5px #66bc46;
 }
 .redcard {
+  padding-top:0.5cm;
   border-radius: 0.4cm;
   transition: transform 0.25s, box-shadow 0.25s;
 }
@@ -987,4 +997,10 @@ td {
 }
 .media-vids > div > iframe:hover {
   box-shadow: 4px 4px 5px 2px #888888;
+}
+.counter-label{
+  display:flex;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 600;
 }
