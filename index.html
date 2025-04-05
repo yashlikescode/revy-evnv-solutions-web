@@ -287,7 +287,7 @@
 
     <main class="p-5" data-bs-spy="scroll" data-bs-target="#revynav">
       <article id="home-article" style="text-align: center">
-        <h2>Innovation and Impact</h2>
+        <h2>Impact created by REVY's Products and Services</h2>
         <div class="recycle-reuse row justify-content-center" style="margin-bottom:2cm;">
           <div
             class="card redcard col-lg-2 col-md-3 col-sm-5"
@@ -307,7 +307,7 @@
             />
             <div class="card-body hiddenv">
               <h5 class="card-title p-reduce" style="color: #4a99d3">Used Water Treated (ML)</h5>
-              <div class="counter-label"><div class="counter" data-target="5502">0</div> +</div>
+              <div class="counter-label"><div class="counter" data-change="305" data-target="5502">0</div> +</div>
             </div>
           </div>
 
@@ -329,7 +329,7 @@
             />
             <div class="card-body hiddenv">
               <h5 class="card-title p-reduce" style="color: #FBC412">Organic Waste Treated (Tons)</h5>
-              <div class="counter-label"><div class="counter" data-target="427102">0</div> +</div>
+              <div class="counter-label"><div class="counter" data-change="5" data-target="427102">0</div> +</div>
             </div>
           </div>
 
@@ -354,12 +354,12 @@
               <h5 class="card-title p-reduce" style="color: #47773D">
                 GHG Mitigation (mCO2/t)
               </h5>
-              <div class="counter-label"><div class="counter" data-target="1911">0</div> +</div>
+              <div class="counter-label"><div class="counter" data-change="6" data-target="1911">0</div> +</div>
             </div>
           </div>
         </div>
 
-        <iframe class="home-youtube-landing" src="https://www.youtube.com/embed/2cjflpSewWo?autoplay=1&controls=1&showinfo=0&modestbranding=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="home-youtube-landing" src="https://www.youtube.com/embed/2cjflpSewWo?loop=1&autoplay=1&controls=1&showinfo=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <h2>
           <span style="border-bottom: #66bc46 solid 1px; padding-bottom: 5px;font-weight:700;"
@@ -395,7 +395,15 @@
 
   counters.forEach((counter) => {
     const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
+      const startDate = new Date("2025-03-22");
+      const today = new Date();
+      // Get difference in milliseconds
+      const diffMs = today - startDate;
+      // Convert to days
+      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+
+      const target = (+counter.getAttribute("data-target")) + (diffDays * (+counter.getAttribute("data-change")));
       const count = +counter.innerText;
 
       // Lower inc to slow and higher to slow
